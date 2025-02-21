@@ -6,7 +6,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 // ! Spring: Convention Over Configuration
 
@@ -18,6 +23,12 @@ import lombok.Getter;
 @Entity
 @Table(name = "Customers")
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+//@EqualsAndHashCode // for test use, but 冇咩用
+@Builder
+@EqualsAndHashCode //for mock test
+@ToString
 public class CustomerEntity {
   //PK
   @Id
@@ -29,5 +40,7 @@ public class CustomerEntity {
 
   @Column(name = "customer_email")
   private String email;
+
+
   
 }

@@ -1,37 +1,37 @@
 package com.bootcamp.customer.demo_sb_customer.entity;
 
-import java.time.LocalDate;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Orders")
+@Table(name = "Addresses")
 @Getter
-@Setter
-
-public class OrderEntity {
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class AddressEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private Double amount;
-  @Column(name = "order_date")
-  private LocalDate orderDate; //Java LocalDate -> Database
+  private String street;
+  private String suite;
+  private String city;
+  private String zipcode;
+  //private Geo geo;
 
-  //FK ~ is object
-  @ManyToOne
-  @JoinColumn(name = "customer_id")
-  private CustomerEntity customerEntity; //reference to which table (CustomerEntity)
-
-
+  @OneToOne
+  @JoinColumn(name = "user_id")
+  @Setter
+  private UserEntity userEntity;
   
 }
