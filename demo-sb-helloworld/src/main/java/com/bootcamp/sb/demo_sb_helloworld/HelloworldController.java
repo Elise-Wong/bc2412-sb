@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloworldController {
 
   // an API for Getting Resource
-  @GetMapping(value = "/greeting") // 用名詞, unique
+  @GetMapping(value = "/iphone/greeting") // 用名詞, unique
   public String hello() {
     return "Hello World !";
   }
