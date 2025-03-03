@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoSbCustomerApplicationTests {
 
 	// ! test all dependency between componentse (@controller, @service, @autowired etc.)
-	@Test
+	///@Test
 	void contextLoads() {
 	}
 

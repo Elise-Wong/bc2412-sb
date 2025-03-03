@@ -1,0 +1,28 @@
+<!-- coin-data.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Coin Data</title>
+</head>
+<body>
+    <h1>Coin Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Current Price (USD)</th>
+                <th>Market Capitalization</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="coinData : ${coinList}">
+                <td th:text="${coinData.id}"></td>
+                <td><img th:src="${coinData.image}" alt="Coin Image" height="30"></td>
+                <td th:text="${coinData.currentPrice}"></td>
+                <td th:text="${coinData.marketCap}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

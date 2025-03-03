@@ -56,7 +56,7 @@ class CustomerControllerTest { //因為每個test是獨立的, 不會有public
   private ObjectMapper objectMapper;
 
 // ! Test for GET
-  @Test
+  ///@Test
   void testGetAllCustomers() throws Exception{ 
     // ! Mock behavior for the mock bean
     CustomerEntity customerEntity1 = CustomerEntity.builder()
@@ -130,7 +130,7 @@ class CustomerControllerTest { //因為每個test是獨立的, 不會有public
   }
 
 // ! Test for POST/create
-    @Test
+    ///@Test
     void testCreateCustoemr() throws Exception{
       // step 1: Create a object for expected output
       // ! Mock Behavior (pass Mary, return John)

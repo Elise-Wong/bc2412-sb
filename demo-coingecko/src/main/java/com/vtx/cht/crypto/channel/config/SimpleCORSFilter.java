@@ -11,17 +11,17 @@ import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@Component
+// @Component //因為有@CrossOrigin
 public class SimpleCORSFilter implements Filter {
 
   @Override
   public void doFilter(ServletRequest req, ServletResponse res,
       FilterChain chain) throws IOException, ServletException {
     HttpServletRequest reqs = (HttpServletRequest) req;
-    String curOrigin = reqs.getHeader("Origin");
-    HttpServletResponse response = (HttpServletResponse) res;
-    response.setHeader("Access-Control-Allow-Origin",
-        curOrigin == null ? "true" : curOrigin);
+    String curOrigin = reqs.getHeader("Origin"); // !
+    HttpServletResponse response = (HttpServletResponse) res; // !
+    response.setHeader("Access-Control-Allow-Origin", // ! CRS!!! for front end (i.e. Application React, Vue)
+        curOrigin == null ? "true" : curOrigin); // ! affect the request and the respones
     response.setHeader("Access-Control-Allow-Credentials", "true");
     response.setHeader("Access-Control-Allow-Methods",
         "POST, GET, OPTIONS, DELETE, HEAD");

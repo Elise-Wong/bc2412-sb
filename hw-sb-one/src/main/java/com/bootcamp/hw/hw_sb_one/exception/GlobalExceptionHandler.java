@@ -14,5 +14,23 @@ public class GlobalExceptionHandler {
   public ErrorResult handleArithmetic(RuntimeException e){
     return new ErrorResult(e.getMessage());
   }
+
+  @ExceptionHandler(value = NumberFormatException.class)
+  @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+  public ErrorResult handleNumberFormatException(){
+    return ErrorResult.builder()
+      .code(9)
+      .message("Invalid Input.")
+      .build();
+  }
+
+  @ExceptionHandler(value = OperationArgumentException.class) //IllegalArgumentException.class
+  @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+  public ErrorResult handleOperationArgumentException(){
+    return ErrorResult.builder()
+      .code(9)
+      .message("Invalid Input.")
+      .build();
+  }
   
 }

@@ -18,9 +18,9 @@ public class PreServerStartConfig implements CommandLineRunner {
     System.out.println("Hello!!!!!!");
 
     int x = 3;
-    if (x < 4){
-      throw new Exception();
-    }
+    // if (x < 4){
+    //   throw new Exception(); //因為咁樣會整死左自己
+    // }
     
   }
 

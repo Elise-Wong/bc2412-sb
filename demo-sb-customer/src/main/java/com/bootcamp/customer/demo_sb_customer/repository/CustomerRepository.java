@@ -39,7 +39,7 @@ public interface CustomerRepository extends JpaRepository<CustomerEntity, Long> 
   //find id , 通常是唯一, 不會出list
 
   //how about return List?
-  List<CustomerEntity> findByName1(String name);
+ // List<CustomerEntity> findByName(String name);
 
 
 

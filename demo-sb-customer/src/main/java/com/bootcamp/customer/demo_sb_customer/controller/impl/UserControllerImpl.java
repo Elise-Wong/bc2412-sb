@@ -13,6 +13,8 @@ import com.bootcamp.customer.demo_sb_customer.dto.UserDTO;
 import com.bootcamp.customer.demo_sb_customer.dto.mapper.UserDTOMapper;
 import com.bootcamp.customer.demo_sb_customer.model.dto.UserDto;
 import com.bootcamp.customer.demo_sb_customer.service.UserService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,12 +27,13 @@ public class UserControllerImpl implements UserOperation {
   private UserDTOMapper userDTOMapper;
 
   @GetMapping(value = "/users")
+  //@GetMapping(value = "/jsonplaceholder/users")
   //public List<UserDto> getUsers(){
     //return this.userService.getUsers();
 
  // List sof UserDto -> List of UserDTO
  // object 內 object
-  public List<UserDTO> getUsers(){
+  public List<UserDTO> getUsers() throws JsonProcessingException {
     return this.userService.getUser().stream()
       .map(e -> userDTOMapper.map(e))
       .collect(Collectors.toList());

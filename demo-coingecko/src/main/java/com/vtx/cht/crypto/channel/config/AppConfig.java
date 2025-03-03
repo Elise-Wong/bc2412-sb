@@ -33,6 +33,16 @@ public class AppConfig {
     return new ObjectMapper();
   }
 
+  // ! for Spring Boot use(RestTemplate, Controller serialziation)
+  // @Bean
+  // ObjectMapper objectMapper() {
+  //   ObjectMapper objectMapper = new ObjectMapper() //
+  //               .registerModule(new ParameterNamesModule()) //
+  //               .registerModule(new Jdk8Module()) //
+  //               .registerModule(new JavaTimeModule());
+  // }
+  
+  // follow the code
   @Bean
   RedisManager redisManager(RedisConnectionFactory factory) {
     ObjectMapper objectMapper = new ObjectMapper() //

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html>
+  <head>
+    <title>External API Data</title>
+  </head>
+  <body>
+      <h1 th:text="'Hello!! Tutor Name: ' + ${tutor}"></h1>
+      <h2>Data from External API</h2>
+      <div th:text="${coinList}"></div>
+  </body>
+</html>

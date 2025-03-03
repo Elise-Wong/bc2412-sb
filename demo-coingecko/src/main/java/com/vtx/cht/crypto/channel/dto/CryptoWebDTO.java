@@ -1,5 +1,7 @@
 package com.vtx.cht.crypto.channel.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,7 +20,9 @@ public class CryptoWebDTO {
   private String image;
   private Double currentPrice;
   private Double marketCap;
+  private Double totalVolume; //
   private Double priceChange24h;
   private Double priceChangePercentage24h;
+  //@JsonFormat()
   private String lastUpdated;
 }

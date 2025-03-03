@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .search-input {
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .result-box {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .positive {
+            color: black;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        .cross-icon {
+            width: 20px; /* Adjust size as needed */
+            height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Search</h2>
+        <div class="search-container">
+            <label class="search-label">Search:</label>
+            <input type="text" class="search-input" id="searchInput" placeholder="Type to search...">
+        </div>
+
+        <div class="result-box positive">
+            <span>8.35%</span>
+            <img src="path/to/cross-icon.png" alt="Cross" class="cross-icon" onclick="handleCrossClick(this)">
+        </div>
+        <div class="result-box negative">
+            <span>-9.35%</span>
+            <img src="path/to/cross-icon.png" alt="Cross" class="cross-icon" onclick="handleCrossClick(this)">
+        </div>
+    </div>
+
+    <script>
+        // Function to handle the cross icon click
+        function handleCrossClick(element) {
+            const resultBox = element.closest('.result-box');
+            resultBox.style.display = 'none'; // Hides the result box on click
+        }
+
+        // Search functionality (optional)
+        document.getElementById('searchInput').addEventListener('input', function() {
+            console.log(this.value);
+        });
+    </script>
+
+</body>
+
+</html>

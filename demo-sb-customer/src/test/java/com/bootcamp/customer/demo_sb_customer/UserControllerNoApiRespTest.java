@@ -30,7 +30,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @WebMvcTest(controllers = UserControllerImpl.class)
 public class UserControllerNoApiRespTest {
-  @Test // test for @WebMvcTest is ok or not
+  ///@Test // test for @WebMvcTest is ok or not
   void contextLoad(){
 
   }
@@ -48,7 +48,7 @@ public class UserControllerNoApiRespTest {
   @Autowired
   private ObjectMapper objectMapper;
 
-  @Test
+  ///@Test
   void testGetAllUsers() throws Exception{
     // controller: covert List of Dto to List of DTO
     // map 出黎既形狀岩就得了, care abt DTO

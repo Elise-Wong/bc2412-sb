@@ -15,7 +15,7 @@ const app = createApp(App);
 app.component("fa", FontAwesomeIcon);
 app.mount("#app");
 
-// custom filter
+// custom filter // 有input 就有 output vs Java: 有input, 但行走memory
 app.config.globalProperties.$filters = {
   // percent
   price_negative(value) {
@@ -29,7 +29,7 @@ app.config.globalProperties.$filters = {
     // Add comma for dollar format, i.e. 1,000,000
     return value.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
   },
-  // truncate string
+  // truncate string //static method
   string_trunc(value, size) {
     if (!value) return "";
     value = value.toString();

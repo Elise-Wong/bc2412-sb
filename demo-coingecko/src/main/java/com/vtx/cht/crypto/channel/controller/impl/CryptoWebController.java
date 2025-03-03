@@ -22,7 +22,7 @@ public class CryptoWebController implements CryptoWebOperation {
   private DTOMapper dtoMapper;
 
   @Override
-  public List<CryptoWebDTO> getCoinMarket() {
+  public List<CryptoWebDTO> getCoinMarket() { //(Cat cat) 
     return coinGeckoService.getCoinMarket() //
         .stream() //
         .map(e -> dtoMapper.map(e)) //
