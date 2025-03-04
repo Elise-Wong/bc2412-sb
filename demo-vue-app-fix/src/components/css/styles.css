@@ -1,0 +1,77 @@
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* add background image */
+  background-image: url('~@/components/images/background.jpg');
+  background-size: auto;
+}
+
+.negative-change {
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.75rem; /* Adjust as needed */
+  color: #ef4444; /* Adjust the color code as needed */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.positive-change {
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.75rem; /* Adjust as needed */
+  color: #4ac934; /* Adjust the color code as needed */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coin-header {
+  background-color: #f7ece6; /* Blue background color */
+  color: #625b5b; /* White text color */
+}
+
+/* Style the header cells within the "coin-header" class */
+.coin-header th {
+  font-weight: bold; /* Make the text bold */
+  text-align: left; /* Center-align the text */
+  border-bottom: 2px solid #bc4343; /* Add bottom border with white color */
+}
+
+.marquee-content {
+  animation: scrolling 25s linear infinite;
+}
+.marquee-content li {
+  width: 19%;
+}
+.table-title {
+  font-size : 30px;
+  bottom: 30;
+  height: 1.5em;
+}
+.marquee:before,
+.marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 3em;
+  content: "";
+  z-index: 1;
+}
+.marquee {
+  background: rgb(14, 85, 103);
+}
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, rgb(96, 185, 207) 0%, transparent 80%);
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, rgb(96, 185, 207) 0%, transparent 80%);
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
