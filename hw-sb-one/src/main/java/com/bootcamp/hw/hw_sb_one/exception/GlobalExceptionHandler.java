@@ -12,7 +12,7 @@ public class GlobalExceptionHandler {
   @ExceptionHandler(value = {ArithmeticException.class, BusinessException.class})
   @ResponseStatus(value = HttpStatus.OK)
   public ErrorResult handleArithmetic(RuntimeException e){
-    return new ErrorResult(e.getMessage());
+    return new ErrorResult(e.getCode(), e.getMessage());
   }
 
   @ExceptionHandler(value = NumberFormatException.class)

@@ -36,7 +36,7 @@ public class BcCalculatorController implements BcCalculatorOperation{
     @RequestParam Integer x, @RequestParam Integer y, @RequestParam String method) {
       return switch (operation){
         case "add" -> BigDecimal.valueOf(x).add(BigDecimal.valueOf(y)).doubleValue();
-      }
+      };
 
       //toString()
   }
@@ -46,7 +46,7 @@ public class BcCalculatorController implements BcCalculatorOperation{
     Double param1 = Double.valueOf(x);
     Double param2 = Double.valueOf(y);
     Operation operator = Operation.of(operation);
-    Double result = calcaulte(param1, param2, operator, result)
+    Double result = calcaulte(param1, param2, operator, result);
     return this.mapper.map(x, y, operator, result);
   }
 
@@ -55,7 +55,7 @@ public class BcCalculatorController implements BcCalculatorOperation{
     Double param1 = Double.valueOf(x);
     Double param2 = Double.valueOf(y);
     Operation operator = Operation.of(operation);
-    Double result = calcaulte(param1, param2, operator, result)
+    Double result = calcaulte(param1, param2, operator, result);
     return this.mapper.map(x, y, operator, result);
   }
 
@@ -64,7 +64,7 @@ public class BcCalculatorController implements BcCalculatorOperation{
     Integer param1 = Integer.valueOf(reqDTO.getX());
     Integer param2 = Integer.valueOf(reqDTO.getY());
     Operation operator = Operation.of(reqDTO.getOperation());
-    Integer result = calcaulte(param1, param2, operator, result)
+    Integer result = calcaulte(param1, param2, operator, result);
     return this.mapper.map(x, y, operator, result);
   }
 

@@ -112,7 +112,7 @@
           </td>          
         </tr>
         <tr class="text-left bg-gray-100 text-gray-600 text-sm">
-          <th class="w-1/4 p-2">#</th> <!-- # -->
+          <th class="w-1/4 p-1">#</th> <!-- # -->
           <th class="w-1/4 p-4">Coin Name</th>
           <th class="w-1/4">Market Price(Real Time)</th>
           <th class="w-1/4">Change%(24 Hours)</th>

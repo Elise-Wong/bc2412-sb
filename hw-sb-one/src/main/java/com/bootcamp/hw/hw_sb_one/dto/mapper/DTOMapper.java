@@ -14,6 +14,6 @@ public class DTOMapper {
       .y(String.valueOf(y))
       .operation(reqDto)
       .result(String.valueOf(result))
-      .build()
+      .build();
   }
 }

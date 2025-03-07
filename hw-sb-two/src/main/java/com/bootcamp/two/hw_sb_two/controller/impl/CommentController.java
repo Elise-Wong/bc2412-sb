@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bootcamp.two.hw_sb_two.controller.CommentOperation;
 import com.bootcamp.two.hw_sb_two.dto.CommentDTO;
-import com.bootcamp.two.hw_sb_two.dto.commentDTO;
+
 import com.bootcamp.two.hw_sb_two.dto.mapper.CommentDTOMapper;
 import com.bootcamp.two.hw_sb_two.model.dto.CommentDto;
 import com.bootcamp.two.hw_sb_two.service.CommentService;

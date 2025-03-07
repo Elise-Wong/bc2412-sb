@@ -1,0 +1,15 @@
+# server.port
+server:
+  port: 8100
+
+
+api:
+  yfm:
+    url:
+      base: "https://query1.finance.yahoo.com"
+      versionC: "/v1"
+      CrumbEndpoint: "/test/getcrumb"
+
+      versionS: "/v7"
+      FinanceEndpoint: "/finance/quote"
+
