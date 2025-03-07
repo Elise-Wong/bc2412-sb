@@ -8,7 +8,7 @@ public interface CrumbService {
 
   CrumbDto getCrumb();
 
-  int fetchCrumb();
+  //int fetchCrumb();
 
 
 

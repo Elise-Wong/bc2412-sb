@@ -13,8 +13,6 @@ import lombok.ToString;
 @Setter
 @Builder
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class QuoteDto implements Serializable{
   private QuoteResponse quoteResponse;
 
@@ -23,8 +21,6 @@ public class QuoteDto implements Serializable{
   @Setter
   @Builder
   @ToString
-  @NoArgsConstructor
-  @AllArgsConstructor
   public static class QuoteResponse {
     private Result[] result;
     private String error; // Using String for simplicity, could be null
@@ -35,8 +31,6 @@ public class QuoteDto implements Serializable{
   @Setter
   @Builder
   @ToString
-  @NoArgsConstructor
-  @AllArgsConstructor
   public static class Result {
     private String language;
     private String region;
@@ -113,8 +107,6 @@ public class QuoteDto implements Serializable{
     @Setter
     @Builder
     @ToString
-    @NoArgsConstructor
-    @AllArgsConstructor
     public static class CorporateAction {
       private String header;
       private String message;
@@ -125,14 +117,11 @@ public class QuoteDto implements Serializable{
       @Setter
       @Builder
       @ToString
-      @NoArgsConstructor
-      @AllArgsConstructor
       public static class Meta{
         private String eventType;
         private long dateEpochMs;
         private Double amount;
       }
+    }
 
-
-  
-}
+}  

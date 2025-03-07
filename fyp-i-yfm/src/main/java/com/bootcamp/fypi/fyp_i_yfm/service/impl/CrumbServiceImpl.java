@@ -21,8 +21,8 @@ import com.bootcamp.fypi.fyp_i_yfm.service.CrumbService;
 public class CrumbServiceImpl implements CrumbService{
   @Autowired
   private RestTemplate restTemplate;
-  @Autowired
-  private ClearCookies clearCookies;
+  // @Autowired
+  // private ClearCookies clearCookies;
 
   @Value("${api.yfm.url.base}")
   private String baseUrl;
@@ -48,12 +48,12 @@ public class CrumbServiceImpl implements CrumbService{
   }
 
   //
-  @Override
-  public int fetchCrumb(){
-    int responseCode = clearCookies.getCrumb("https://query1.finance.yahoo.com/v1/test/getcrumb");
-    System.out.println("Response Code: " + responseCode);
-    return responseCode;
+  // @Override
+  // public int fetchCrumb(){
+  //   int responseCode = clearCookies.getCrumb("https://query1.finance.yahoo.com/v1/test/getcrumb");
+  //   System.out.println("Response Code: " + responseCode);
+  //   return responseCode;
     
-  }
+  // }
 
 }
