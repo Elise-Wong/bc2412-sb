@@ -10,7 +10,7 @@ public interface CrumbService {
 
   //int fetchCrumb();
 
-
+  String getCrumbKey();
 
   
 

@@ -14,14 +14,14 @@ public class ClearCookies {
   private static final String COOKIE = "B=12345abcde; GUC=AQEBCAFZ...";  // 你的 Cookie
   private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 
-  private RestTemplate restTemplate;
+  // private RestTemplate restTemplate;
 
 
   public int getCrumb(String urlString) {
       try {
           // Create URL object
           URL url = new URL(urlString);
-          HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+          HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //java 1.1, old, no spring 
 
           // 设置 User-Agent
           // List<String> userAgents = Arrays.asList(
@@ -51,7 +51,7 @@ public class ClearCookies {
             
       } catch (Exception e) {
            e.printStackTrace();
-          return -1; // Return -1 to indicate an error
+          return -1; // Return -1 to indicate an error //void = no need return -1; when int return -1
       }
   }
   
