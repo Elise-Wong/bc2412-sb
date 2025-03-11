@@ -10,10 +10,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.bytedata.trade.util.Yahoo;
 
 public class CookieManager {
+  //attribute
   private RestTemplate restTemplate;
 
+  //constructor
+  //DI (Dependency Injection), JUnit can mock bean
   public CookieManager(RestTemplate restTemplate) {
-    this.restTemplate = restTemplate;
+    this.restTemplate = restTemplate; //better than use new RestTemplate
   }
 
   public String getCookie() {
@@ -30,6 +33,8 @@ public class CookieManager {
       // If no exception thrown, you can find the header from ResponseEntity.
       List<String> cookies = entity.getHeaders().get("Set-Cookie");
       return cookies != null ? cookies.get(0).split(";")[0] : null;
+
+      //以下是主logic:
     } catch (RestClientException e) {
       // Able to get the response headers, even the restTemplate throws error.
       if (e instanceof HttpStatusCodeException) {

@@ -12,9 +12,9 @@ public class CrumbManager {
   private RestTemplate restTemplate;
   private CookieManager cookieManager;
 
-  public CrumbManager(RestTemplate restTemplate) {
+  public CrumbManager(RestTemplate restTemplate) { //(CookieManager cookieManager)...但封裝得好差, 唔夠簡約
     this.restTemplate = restTemplate;
-    this.cookieManager = new CookieManager(restTemplate);
+    this.cookieManager = new CookieManager(restTemplate); // = cookieManager
   }
 
   public String getCrumb() {

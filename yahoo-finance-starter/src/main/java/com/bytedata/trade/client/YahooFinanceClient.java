@@ -13,8 +13,8 @@ import org.springframework.lang.NonNull;
 import org.springframework.web.client.RestTemplate;
 import com.bytedata.trade.api.QuoteFunction;
 
-public class YahooFinanceClient implements QuoteFunction {
-  private static final String USER_AGENT_STRING = "Mozilla/5.0";
+public class YahooFinanceClient implements QuoteFunction { //interface from api, so no api logic here.
+  private static final String USER_AGENT_STRING = "Mozilla/5.0"; //only this is hard code.
 
   private RestTemplate restTemplate;
   private CrumbManager crumbManager;
@@ -31,8 +31,8 @@ public class YahooFinanceClient implements QuoteFunction {
 
     // for user-agent
     this.restTemplate.setInterceptors(interceptors);
-    this.crumbManager = new CrumbManager(this.restTemplate);
-  }
+    this.crumbManager = new CrumbManager(this.restTemplate); // ! share the same object of RestTemplate, not ser for real time
+  } //share cookies~
 
   @Override
   public RestTemplate getRestTemplate() {

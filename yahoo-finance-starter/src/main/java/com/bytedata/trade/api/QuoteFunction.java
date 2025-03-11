@@ -14,7 +14,8 @@ import com.bytedata.trade.util.Yahoo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public interface QuoteFunction {
+// x @FunctionalInterface //as not 1 method 
+public interface QuoteFunction { //如果我有,... //責任在class
   RestTemplate getRestTemplate();
 
   String getCrumbKey();
