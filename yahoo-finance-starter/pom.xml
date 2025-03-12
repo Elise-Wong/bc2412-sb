@@ -20,9 +20,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <lombok.version>1.18.35</lombok.version> <!-- which version -->
+    <maven.compiler.source>21</maven.compiler.source> <!-- 17-->
+    <maven.compiler.target>21</maven.compiler.target> <!-- 17-->
+    <!-- <lombok.version>1.18.35</lombok.version>--> <!-- which version -->
   </properties>
 
   <dependencies>

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Jsonignore  // for 對方有的, 而自己沒有
+//@Jsonignore  // for 對方有的, 而自己沒有
 public class YahooQuoteDTO {
   @JsonProperty("quoteResponse")
   private QuoteBody body;
@@ -108,6 +108,7 @@ public class YahooQuoteDTO {
       private Double preMarketPrice;
       private Long dividendDate;
       private String displayName;
+      private Long postMarketTime;
       
       @Getter
       public static class CorporateAction {
