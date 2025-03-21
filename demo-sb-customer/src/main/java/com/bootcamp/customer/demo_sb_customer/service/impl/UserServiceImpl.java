@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
   
     @Override
     public List<UserDto> getUser() throws JsonProcessingException{ //List 好難用declolisation
-    //Step 1: Red Redis first, if found, return users
+    //Step 1: Read Redis first, if found, return users
     // [{}, {}, {}] to database
     //String json = this.redisTemplate.opsForValue().get("jph-users");
     

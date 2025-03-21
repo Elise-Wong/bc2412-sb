@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockService;
@@ -15,6 +16,8 @@ import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockService;
 public class PreServerStartConfig implements CommandLineRunner{ //task 2
   @Autowired
   private StockService stockService;
+  @Autowired //task 3
+  private RedisTemplate<String, Object> redisTemplate;
 
   @Override
   public void run(String... args) throws Exception{
@@ -27,11 +30,20 @@ public class PreServerStartConfig implements CommandLineRunner{ //task 2
       "0005.HK"
     );
 
-    // Load stocks using service
+    // Load stocks using service //task 2 by gpt
     stockService.loadStockSymbols(stockSymbols);
         
-    // Print all stocks
+    // Print all stocks //task 2 by gpt
     stockService.printSampleStocks();
+
+    // 清除 Redis 中的 STOCK-LIST //task 3 by gpt
+    //stockService.clearStockList();
+    redisTemplate.delete(stockSymbols);
+
+    // 从数据库加载所有股票符号  //task 3 by gpt
+    //stockService.loadStockSymbols(stockSymbols); //i dont think it needs
+
+
   }
 
   
