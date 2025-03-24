@@ -34,31 +34,38 @@ public class StockController implements StockOperation{
   private EntityMapper entityMapper; //address
 
 
-  @GetMapping(value = "/stock") //"/stock/{id}"
-  @ResponseStatus(value = HttpStatus.OK) //return 200
-  public StockDTO getStock(@RequestParam String symbol){ //Long id --> String symbol
+  //@GetMapping(value = "/stock") //"/stock/{id}"
+  //@ResponseStatus(value = HttpStatus.OK) //return 200
+  //public StockDTO getStock(@RequestParam String symbol){ //Long id --> String symbol
+  @Override
+  public StockDTO getStock(String symbol) {
     StockEntity stockEntity = this.stockService.findStock(symbol).orElse(null);
       return this.dtoMapper.map(stockEntity);
   }
 
-  @PostMapping(value = "/stock")
-  @ResponseStatus(value = HttpStatus.CREATED) //201
-  //@Override
-  public StockDTO createStock(@RequestBody StockDTO stockDTO) { //mostly use DTO, convention
+  //@PostMapping(value = "/stock")
+  //@ResponseStatus(value = HttpStatus.CREATED) //201
+  //public StockDTO createStock(@RequestBody StockDTO stockDTO) { //mostly use DTO, convention
+  @Override
+  public StockDTO createStock(StockDTO stockDTO) {
     StockEntity stockEntity = this.entityMapper.map(stockDTO);
     stockEntity = this.stockService.saveStock(stockEntity);
       return this.dtoMapper.map(stockEntity);
   }
   
-  @DeleteMapping(value = "/stock")
-  @ResponseStatus(value = HttpStatus.OK)
-  public StockDTO deleteStock(@RequestParam String symbol){
+  //@DeleteMapping(value = "/stock")
+  //@ResponseStatus(value = HttpStatus.OK)
+  //public StockDTO deleteStock(@RequestParam String symbol){
+  @Override
+  public void deleteStock(String symbol) {
     this.stockService.deleteStock(symbol);
   }
 
-  @PutMapping(value = "/stock") // update for profile
-  @ResponseStatus(value = HttpStatus.OK)
-  public StockDTO updateStock(@RequestParam String symbol, @RequestBody StockDTO stockDTO) { //RESTful是根據一個nom,  定協議的定義是否
+  //@PutMapping(value = "/stock") // update for profile
+  //@ResponseStatus(value = HttpStatus.OK)
+  //public StockDTO updateStock(@RequestParam String symbol, @RequestBody StockDTO stockDTO) { //RESTful是根據一個nom,  定協議的定義是否
+  @Override
+  public StockDTO updateStock(String symbol, StockDTO stockDTO) {
     StockEntity stockEntity = this.entityMapper.map(stockDTO);
     stockEntity = this.stockService.updateStock(symbol, stockEntity);
       return this.dtoMapper.map(stockEntity);
@@ -72,9 +79,11 @@ public class StockController implements StockOperation{
   //    return this.dtoMapper.map(stockEntity);
   //}
   
-  @PatchMapping(value = "/stock") //interview question
-  @ResponseStatus(value = HttpStatus.OK)
-  public StockDTO patchStockDesc(@RequestParam String symbol, @RequestParam String stockDescription) {
+  //@PatchMapping(value = "/stock") //interview question
+  //@ResponseStatus(value = HttpStatus.OK)
+  //public StockDTO patchStockDesc(@RequestParam String symbol, @RequestParam String stockDescription) {
+    @Override
+    public StockDTO patchStockDesc(String symbol, String stockDescription) {
     StockEntity stockEntity =
         this.stockService.patchStockDescription(symbol, stockDescription);
     return this.dtoMapper.map(stockEntity);

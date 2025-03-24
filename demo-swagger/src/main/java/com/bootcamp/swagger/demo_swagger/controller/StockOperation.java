@@ -52,7 +52,7 @@ public interface StockOperation {
   @Hidden //swagger
   @DeleteMapping(value = "/stock")
   @ResponseStatus(value = HttpStatus.OK)
-  public StockDTO deleteStock(@RequestParam String symbol);
+  public void deleteStock(@RequestParam String symbol);
 
 
   @PutMapping(value = "/stock") // update for profile
