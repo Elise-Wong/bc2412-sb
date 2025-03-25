@@ -24,6 +24,7 @@ management.endpoints.web.base-path: /bootcamp
 management.endpoints.web.exposure.include: "*"
 
 # 如果要開啟/actuator/shutdown，要額外再加這一行
+# false , no api shutdown
 management.endpoint.shutdown.enabled: true
 
 # exclude可以用來關閉某些endpoints

@@ -9,7 +9,7 @@ import org.springframework.boot.actuate.info.InfoContributor;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //心跳, no controller then hv API (CH22)
 public class CustomInfoContributor implements InfoContributor {
     @Autowired
     private Environment env;
