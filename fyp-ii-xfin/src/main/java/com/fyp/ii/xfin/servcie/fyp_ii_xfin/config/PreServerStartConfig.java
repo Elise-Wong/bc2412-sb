@@ -9,9 +9,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockService;
+//import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockService;
 
-
+/*
 @Component
 public class PreServerStartConfig implements CommandLineRunner{ //task 2
   @Autowired
@@ -49,4 +49,4 @@ public class PreServerStartConfig implements CommandLineRunner{ //task 2
   
   
 }
- 
+ */ 

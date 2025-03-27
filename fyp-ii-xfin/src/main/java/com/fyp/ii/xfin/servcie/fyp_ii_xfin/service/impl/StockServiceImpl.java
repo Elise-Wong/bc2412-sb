@@ -21,9 +21,9 @@ import com.fyp.ii.xfin.servcie.fyp_ii_xfin.entity.StockEntity;
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.entity.mapper.StockMapper;
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.model.Stock;
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.repository.StockRepository;
-import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockService;
+//import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockService;
 
-
+/*
 @Service
 public class StockServiceImpl implements StockService{
 
@@ -56,7 +56,7 @@ public class StockServiceImpl implements StockService{
     }
   */
 
-
+/*
   @Override  //task 2 by gpt
   public void loadstocksymbols(List<String> stocksymbols) {
 
@@ -82,7 +82,8 @@ public class StockServiceImpl implements StockService{
       throw e;
     }
   }
-
+ */
+/*
   @Override  //task 2 by gpt
   public void printSamplestocks() {
     List<StockEntity> loadedstocks = stockRepository.findAll();
@@ -91,7 +92,7 @@ public class StockServiceImpl implements StockService{
         System.out.println("Symbol: " + stock.getSymbol())
     );
   }
- 
+  */ 
 /* 
  @Override
  public List<String> loadstocksymbols() {
@@ -138,7 +139,7 @@ public class StockServiceImpl implements StockService{
     return loadstocksymbols();
   }
      */
-
+/*
   @Override //task 3
   public List<String> getStockSymbols() throws JsonProcessingException{
     //Step 1: Read Redis first, if found, return users
@@ -150,7 +151,7 @@ public class StockServiceImpl implements StockService{
         return Arrays.asList(redisData);
     }
 
-    List<Stock> stocks = Arrays.asList(this.restTemplate.getForObject(url, String[].class));
+    List<Stock> stocks = Arrays.asList(this.restTemplate.getForObject(json, String[].class));
 
     // Save DB (procedures)
     stocks.stream().forEach(e -> {
@@ -167,3 +168,4 @@ public class StockServiceImpl implements StockService{
   }
 
 }
+ */

@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.impl.StockServiceImpl;
+//import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.impl.StockServiceImpl;
 
 //@Component
 public class RedisCleaner implements CommandLineRunner{ //task 3 by Chatgpt

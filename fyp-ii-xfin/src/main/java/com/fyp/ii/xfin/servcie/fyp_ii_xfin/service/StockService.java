@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-
+/*
 public interface StockService {
   void loadStockSymbols(List<String> stockSymbols); //task 2
   void printSampleStocks(); //task 2
@@ -14,3 +14,4 @@ public interface StockService {
 
   
 }
+ */

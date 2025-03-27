@@ -5,6 +5,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.hc.client5.http.cookie.BasicCookieStore;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
@@ -20,6 +21,7 @@ public class YFinanceManager implements QuoteFunction{
 
   private RestTemplate restTemplate;
   private CrumbKeyManager crumbKeyManager;
+  
 
   public YFinanceManager() {
     List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();

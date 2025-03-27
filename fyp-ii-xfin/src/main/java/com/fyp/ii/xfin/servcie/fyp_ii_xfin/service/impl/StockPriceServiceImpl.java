@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.repository.ResultRepository;
-import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockPriceService;
+//import com.fyp.ii.xfin.servcie.fyp_ii_xfin.service.StockPriceService;
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.entity.QuoteEntity;
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.entity.QuoteResponseEntity;
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.entity.ResultEntity;
