@@ -42,6 +42,7 @@ public class QuoteDTO {
     private long regularMarketTime;
     private Double regularMarketPrice;
     private String regularMarketChange;
+    private Double regularMarketChangePercent;
     private Double bid;
     private Double ask;
     }

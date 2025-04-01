@@ -8,7 +8,7 @@ import com.fyp.ii.xfin.servcie.fyp_ii_xfin.model.dto.QuoteDto;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component // usenless?
 public class StockPriceEntityMapper {
 
   public QuoteEntity map(QuoteDto dto){

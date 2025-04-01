@@ -48,6 +48,7 @@ public class YFinanceManager implements QuoteFunction{
     return this.crumbKeyManager.getCrumb();
   }
 
+  //class
   private static class UserAgentInterceptor
       implements ClientHttpRequestInterceptor {
     private final String userAgent;

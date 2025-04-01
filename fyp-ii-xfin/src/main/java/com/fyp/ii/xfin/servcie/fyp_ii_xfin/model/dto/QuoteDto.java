@@ -1,6 +1,7 @@
 package com.fyp.ii.xfin.servcie.fyp_ii_xfin.model.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -15,7 +16,7 @@ import lombok.ToString;
 @ToString
 public class QuoteDto implements Serializable{
   @JsonProperty("quoteResponse")
-  private QuoteResponse quoteResponse;
+  private QuoteResponse quoteResponse; //
 
   //class - QuoteResponse
   @Getter
@@ -111,7 +112,7 @@ public class QuoteDto implements Serializable{
     public static class CorporateAction {
       private String header;
       private String message;
-      private Meta meta;
+      private Meta meta; //
 
       // class - Meta
       @Getter
