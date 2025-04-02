@@ -18,13 +18,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tstocks_price")
+@Table(name = "tstocks_transaction")
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class StockPriceEntity implements Serializable { //ans: task 4
+public class TransactionEntity implements Serializable {  //ans: task 5
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -39,16 +39,9 @@ public class StockPriceEntity implements Serializable { //ans: task 4
   private LocalDateTime marketDateTime;
   @Column(name = "market_price")
   private Double marketPrice;
-  @Column(name = "market_price_change_percent")
-  private Double marketPriceChangePercent;
-  private Double bid;
-  @Column(name = "bid_size")
-  private Long bidSize;
-  private Double ask;
-  @Column(name = "ask_size")
-  private Long askSize;
 
   @ManyToOne
   @JoinColumn(name = "stock_id")
   private StockEntity stock;
+
 }

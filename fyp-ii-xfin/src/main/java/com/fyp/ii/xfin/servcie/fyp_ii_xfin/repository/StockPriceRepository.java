@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.fyp.ii.xfin.servcie.fyp_ii_xfin.entity.StockPriceEntity;
 
-@Repository
+@Repository  //ans: task 4
 public interface StockPriceRepository extends JpaRepository<StockPriceEntity, Long> {
 
   

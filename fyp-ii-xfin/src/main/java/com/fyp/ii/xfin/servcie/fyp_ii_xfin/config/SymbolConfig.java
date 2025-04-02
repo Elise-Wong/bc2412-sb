@@ -38,10 +38,12 @@ public class SymbolConfig implements CommandLineRunner{
     this.stockRepository.deleteAll();
 
     String[] symbols = new String[] {"0388.HK", "0700.HK", "0005.HK"};
-    List<StockEntity> entities = Arrays.stream(symbols) //
-        .map(e -> StockEntity.builder().symbol(e).build()) //
+    
+    List<StockEntity> entities = Arrays.stream(symbols) 
+        .map(e -> StockEntity.builder().symbol(e).build()) 
         .collect(Collectors.toList());
     stockService.saveAll(entities);
+
     System.out.println("Insert Stock Symbols Completed.");
   }
 }
